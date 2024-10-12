@@ -1,0 +1,171 @@
+.body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.register{
+    background-image: url(../../assets/images/auth/auth-bgcover.jpg);
+    display: flex;
+    justify-content: center;
+   padding-block: 50px;
+   height: auto;
+   height: 138vh;
+   background-size: cover;
+ 
+  
+}
+.full-screen {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 102%;
+    /* height: 100%; */
+    background-color: #fff;
+    z-index: 9999;
+  }
+  .all{
+    width: 900px !important;
+    height: 115vh;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+.input-part{
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+ height: 115vh;
+    padding: 35px;
+ 
+    background-color: var(--gray);
+}
+.input-part input{
+    border: 1px solid var(--blue);
+    border-radius: 6px;
+    padding: 8px;
+    width: 100%;
+   
+}
+.input-part label{
+    margin-block: 11px;
+   font-weight: 600;
+}
+.input-part p{
+    color: var(--black);
+    margin-block: 20px;
+    
+}
+.create-span{
+    color: var(--black) !important;
+}
+.create-div{
+    border-radius: 5px;
+   width: 45%;
+    background-color: #ffffff;
+}
+.btns i{
+    color: var(--white);
+}
+.cover-img{
+    width: 100%;
+    height: 520px;
+    filter: hue-rotate(47deg);
+    
+}
+
+form p{
+    transform: skewX(345deg);
+}
+.logo-img{
+    margin-top: 10px;
+    padding: 10px;
+    height: 100px;
+    width: 100px;
+}
+.img-part i{
+color: black;
+}
+.help{
+    border: 1px solid rgb(213, 213, 213);
+    border-radius: 4px;
+
+    height: 40px;
+  
+}
+.help i{
+    color: var(--purple) !important;
+}
+/*  */
+.input-btn{
+    background-color: var(--purple);
+    color: white;
+    transition: all 0.5s;
+}
+.input-btn:hover{
+    background-color:transparent;
+    color: var(--purple);
+    border: 1px solid var(--purple) !important;
+
+}
+/*  */
+.check{
+    width: 12% !important;
+    border: none !important;
+    background-color: var(--dark-gray) !important;
+}
+.h5-input{
+    color: rgb(163, 12, 163) !important;
+}
+.h6-input{
+    color: var(--dark-gray) !important;
+}
+.error-message {
+    color: rgb(245, 40, 40); /* اللون الأحمر */
+    font-size: 0.9em; /* حجم الخط */
+    margin-top: 0px; /* مسافة فوق الرسالة */
+    display: none; /* إخفاء الرسالة بشكل افتراضي */
+}
+@media screen and (min-width:375px) and (max-width:767px)  {
+    .input-part{
+width: 80%;
+height: 100vh !important;
+opacity: 0.8;
+border-top-right-radius: 8px;
+border-bottom-left-radius: 0px;
+    }
+    .all{
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+    }
+    .img-part{
+        background-color: #ffffff;
+        width: 80%;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    .register{
+        height: 177vh !important;
+    }
+    .cover-img{
+        height: 330px !important;
+    }
+    .top-img-part{
+       padding-inline: 25px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:950px){
+    .all{
+        display: flex;
+        justify-content: center;
+        width: 90% !important;
+        height: 95vh !important;
+    }
+    .input-part{
+    
+        height: 95vh !important;
+    
+       
+            }
+}

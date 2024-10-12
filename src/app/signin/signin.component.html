@@ -1,1 +1,95 @@
-<p>signin works!</p>
+<div class="register full-screen">
+    <div class="all  row w-75 " [ngStyle]="{ 'height': shouldShowErrorMessages() ? '127vh' : '115vh' }">
+      <div class= " col-md-5 col-12   input-part" [ngStyle]="{ 'height': shouldShowErrorMessages() ? '127vh' : '115vh' }">
+      <div class="text-center my-4">
+        <h5 class="h5-input ">Welcome Back !</h5>
+        <h6 class="h6-input mt-3">Sign in to continue to <span class="d-block mt-2">Darrebni Social</span></h6>
+      </div>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <label class="d-block" for="email">Email</label>
+          <input
+            class="d-block mb-2"
+            type="email"
+            id="email"
+            formControlName="email"  
+            (blur)="form.get('email')?.markAsTouched()"
+            required
+          />
+          <div class="mt-0" *ngIf="form.get('email')?.invalid && form.get('email')?.touched" style="color: red;">
+            <small *ngIf="form.get('email')?.errors?.['required']">Email is required.</small>
+            <small *ngIf="form.get('email')?.errors?.['pattern']">Invalid email format.</small>
+          </div>
+         
+          <label class="d-block  mt-4" for="password">Password </label>
+  
+          <input
+            class="d-block mb-2"
+            type="password"
+            formControlName="password"  
+            id="password"
+            placeholder="Enter your password"
+            (blur)="form.get('password')?.markAsTouched()"
+            required
+          />
+          <div *ngIf="form.get('password')?.invalid && form.get('password')?.touched" style="color: red;">
+            <small *ngIf="form.get('password')?.errors?.['required']">Password is required.</small>
+            <small *ngIf="form.get('password')?.errors?.['minlength']">Password must be at least 8 characters.</small>
+            <small *ngIf="form.get('password')?.errors?.['pattern']">Password must contain at least one number, one uppercase and lowercase letter.</small>
+          </div>
+          <div class="d-flex justify-content-start mt-4">
+            <input  class="check "  type="checkbox" name="remember" id="remember">
+            <span >Remember me</span>
+          </div>
+     
+          <input
+            class="btn input-btn my-5"
+            type="submit"
+            value="Sign In"
+            aria-label="Sign In "
+          />
+          <div class="d-flex justify-content-center mt-2 ">
+            <div class="create-div p-1 text-center">
+              <span class="create-span">Sign In with </span>
+            </div>
+          </div>
+          <div class="btns mt-4 d-flex justify-content-center">
+            <a
+              class="btn btn-primary mx-2 px-3"
+              role="button"
+              aria-disabled="true"
+              aria-label="Sign in with Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-danger mx-2"
+              role="button"
+              aria-disabled="true"
+              aria-label="Sign in with google"
+              ><i class="fab fa-google"></i
+            ></a>
+          </div>
+        </form>
+        <div class="mt-5 text-center">
+          <span>Don't have an account ?</span><a class="mx-1 fw-bold" routerLink="/register">  <u>SignUp</u></a>
+        </div>
+      </div>
+      <div class="col-md-7 col-12 img-part">
+        <div class="top-img-part d-flex justify-content-between">
+          <img class="logo-img" src="../../assets/images/logo/4.png" alt="" />
+          <div class="help mt-4 me-3 text-center d-flex align-items-center px-2">
+            <a href="">help</a>
+            <i class="fas fa-question-circle fa-lg mx-2"></i>
+          </div>
+        </div>
+        <div>
+          <img
+          [ngStyle]="{ 'height': shouldShowErrorMessages() ? '630px' : '520px' }"
+            class="cover-img mt-4"
+            src="../../assets/images/auth/img-01log.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  

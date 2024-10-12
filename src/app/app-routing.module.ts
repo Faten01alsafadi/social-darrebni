@@ -15,8 +15,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { SigninComponent } from './signin/signin.component';
 import { ErrorComponent } from './error/error.component';
 
+
 const routes: Routes = [
-  { path: '', redirectTo: '/feed', pathMatch: 'full' }, 
+  { path: '', redirectTo: '/register', pathMatch: 'full' }, 
+
   { path: 'feed', component: FeedComponent },
   { path: 'forgot', component: ForgotpasswordComponent },
   { path: 'friends', component: FriendsComponent },

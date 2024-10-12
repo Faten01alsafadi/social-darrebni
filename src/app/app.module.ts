@@ -21,7 +21,7 @@ import { ChatsComponent } from './chats/chats.component';
 import { AccountComponent } from './account/account.component';
 import { AccountsettingComponent } from './accountsetting/accountsetting.component';
 import { ErrorComponent } from './error/error.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +46,8 @@ import { ErrorComponent } from './error/error.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
