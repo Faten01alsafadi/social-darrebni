@@ -12,8 +12,11 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
+          
           "options": {
-            "outputPath": "dist/social",
+           
+            "outputPath": "docs",
+            "baseHref": "/social-darrebni/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
